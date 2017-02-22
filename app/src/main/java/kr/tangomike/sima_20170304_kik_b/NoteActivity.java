@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -63,6 +64,14 @@ public class NoteActivity extends Activity {
 
         ivContent = (ImageView)findViewById(R.id.iv_scrl_content);
         scrl = (ScrollView)findViewById(R.id.scrl_note);
+
+        scrl.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                dc.resetTimer();
+                return false;
+            }
+        });
 
         btnNote1 = (Button)findViewById(R.id.btn_note_1);
         btnNote1.setOnClickListener(new View.OnClickListener() {
