@@ -52,7 +52,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="136dp"
+        android:layout_marginLeft="109dp"
         android:layout_marginTop="678dp"
         android:id="@+id/btn_video1"
         android:background="@drawable/media_btn_1_push"/>
@@ -60,11 +60,19 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="206dp"
+        android:layout_marginLeft="171dp"
         android:layout_marginTop="678dp"
         android:id="@+id/btn_video2"
         android:background="@drawable/media_btn_video_2"/>
 
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="233dp"
+        android:layout_marginTop="678dp"
+        android:id="@+id/btn_video3"
+        android:background="@drawable/media_btn_video_3"/>
 
 
     <ImageView

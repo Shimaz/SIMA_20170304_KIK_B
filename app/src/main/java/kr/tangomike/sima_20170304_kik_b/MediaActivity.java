@@ -38,6 +38,7 @@ public class MediaActivity extends Activity implements Runnable{
     private Button btnPlayPause;
     private Button btnVideo1;
     private Button btnVideo2;
+    private Button btnVideo3;
 
     private DataCollection dc;
 
@@ -104,7 +105,7 @@ public class MediaActivity extends Activity implements Runnable{
         btnVideo1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(videoNumber == 2){
+                if(videoNumber != 1){
                     setVideo(1);
                 }
 
@@ -116,9 +117,21 @@ public class MediaActivity extends Activity implements Runnable{
         btnVideo2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(videoNumber == 1){
+                if(videoNumber != 2){
                     setVideo(2);
                 }
+
+            }
+        });
+
+        btnVideo3 = (Button)findViewById(R.id.btn_video3);
+        btnVideo3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(videoNumber !=3){
+                    setVideo(3);
+                }
+
 
             }
         });
@@ -232,9 +245,17 @@ public class MediaActivity extends Activity implements Runnable{
 
             btnVideo1.setBackgroundResource(R.drawable.media_btn_1_push);
             btnVideo2.setBackgroundResource(R.drawable.media_btn_video_2);
-        }else{
+            btnVideo3.setBackgroundResource(R.drawable.media_btn_video_3);
+        }else if (number == 2){
             btnVideo1.setBackgroundResource(R.drawable.media_btn_video_1);
             btnVideo2.setBackgroundResource(R.drawable.media_btn_2_push);
+            btnVideo3.setBackgroundResource(R.drawable.media_btn_video_3);
+
+
+        }else{
+            btnVideo1.setBackgroundResource(R.drawable.media_btn_video_1);
+            btnVideo2.setBackgroundResource(R.drawable.media_btn_video_2);
+            btnVideo3.setBackgroundResource(R.drawable.media_btn_3_push);
 
 
         }
