@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.tangomike.sima_20170304_kik_b">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+
     <application
         android:name=".DataCollection"
         android:allowBackup="true"
@@ -9,7 +11,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="김인겸_B"
         android:supportsRtl="true"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        >
         <activity
             android:name=".MainActivity"
             android:screenOrientation="sensorLandscape"
